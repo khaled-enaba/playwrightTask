@@ -1,0 +1,1 @@
+Is the add to cart button visible? true

@@ -6,7 +6,7 @@ test('buy product', async ({ page }) => {
     //choose the product
     await page.locator('(//a[@class="card"])[1]').click();
 
-    await page.locator("#btn-increase-quantity").dblclick();
+    await page.locator("#btn-increase-quantity").click();
     const addCart = await page.locator(`//button[@id='btn-add-to-cart']`);
     await expect(await page.locator(`//button[@id='btn-add-to-cart']`)).toBeVisible();
     // Debugging: Check if the locator is found

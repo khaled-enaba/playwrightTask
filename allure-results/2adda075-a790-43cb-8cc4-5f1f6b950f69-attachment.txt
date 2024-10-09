@@ -1,0 +1,6 @@
+Response Body: {
+  name: 'john doe',
+  job: 'software engineer',
+  id: '625',
+  createdAt: '2024-10-09T04:27:49.399Z'
+}

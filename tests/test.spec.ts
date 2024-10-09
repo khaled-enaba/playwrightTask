@@ -26,16 +26,16 @@ test('buy product', async ({ page }) => {
   
     await page.locator("input[value='Login']").dblclick();
     await page.locator("div[class='col-md-6 offset-md-3 login-form-1'] div[class='float-end ng-star-inserted'] button[type='button']").dblclick();
-    await page.locator('[data-test="address"]').click();
+
     await page.locator('[data-test="address"]').click();
     await page.locator('[data-test="address"]').fill('TalaatharbSt');
     await page.locator('[data-test="city"]').click();
     await page.locator('[data-test="city"]').fill('cairo');
-    await page.locator('[data-test="city"]').press('Tab');
+
     await page.locator('[data-test="state"]').fill('cairo');
-    await page.locator('[data-test="state"]').press('Tab');
+
     await page.locator('[data-test="country"]').fill('Egypt');
-    await page.locator('[data-test="country"]').press('Tab');
+
     await page.locator('[data-test="postcode"]').fill('16411');
     await page.locator("//div[@class='float-end']//button[@type='button'][normalize-space()='Proceed to checkout']").click();
     await page.locator('[data-test="payment-method"]').selectOption('cash-on-delivery');

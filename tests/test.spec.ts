@@ -4,7 +4,7 @@ test('buy product', async ({ page }) => {
     await page.goto('https://practicesoftwaretesting.com/');
 
     //choose the product
-    await page.locator('(//a[@class="card"])[1]').click();
+    await page.locator('(//a[@class="card"])[1]').click({timeout:20000});
 
     await page.locator("#btn-increase-quantity").click();
     const addCart = await page.locator(`//button[@id='btn-add-to-cart']`);
@@ -15,10 +15,10 @@ test('buy product', async ({ page }) => {
     
     await addCart.click();
     //go to your cart
-    await page.locator("//a[@aria-label='cart']").click();
+    await page.locator("//a[@aria-label='cart']").click({timeout:10000});
 
     //confirm process
-    await page.locator('[data-test="proceed-1"]').click();
+    await page.locator('[data-test="proceed-1"]').click({timeout:5000});
     
     await page.locator('[data-test="email"]').click();
     await page.locator('[data-test="email"]').fill('customer@practicesoftwaretesting.com');

@@ -37,7 +37,7 @@ test('buy product', async ({ page }) => {
     await page.locator('[data-test="country"]').fill('Egypt');
     await page.locator('[data-test="country"]').press('Tab');
     await page.locator('[data-test="postcode"]').fill('16411');
-    await page.locator('[data-test="proceed-3"]').click();
+    await page.locator("//div[@class='float-end']//button[@type='button'][normalize-space()='Proceed to checkout']").click();
     await page.locator('[data-test="payment-method"]').selectOption('cash-on-delivery');
     await page.locator('[data-test="finish"]').click();
 })

@@ -1,11 +1,9 @@
 import {test, expect} from '@playwright/test'
-
+import * as fs from 'fs'
 test('test api', async ({ request }) => {
   
-    const userData = {
-        name: 'john doe',
-        job : 'software engineer'
-    }
+    
+    const userData = JSON.parse(fs.readFileSync('userData.json', 'utf-8'));
 
     const response = await request.post('https://reqres.in/api/users', {
         data: userData
